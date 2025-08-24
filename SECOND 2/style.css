@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffcccc, #ffe6e6);
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.center-card {
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 100, 100, 0.3);
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+
+.center-card h1 {
+  font-size: 2.5em;
+  color: #d9534f;
+  margin-bottom: 10px;
+}
+
+.center-card p {
+  font-size: 1.1em;
+  color: #555;
+  margin: 10px 0;
+}
+
+.center-card button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  background-color: #d9534f;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.center-card button:hover {
+  background-color: #c9302c;
+}
+
+.hearts-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.heart {
+  position: absolute;
+  color: red;
+  font-size: 20px;
+  animation: floatHearts 6s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes floatHearts {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.popup-content h2 {
+  color: #d9534f;
+}
+
+.popup-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
